@@ -13,8 +13,23 @@ A runnable React MVP for physiotherapy/therapy booking plus an athlete Strength 
 - Squad nutrition and hydration tracking
 - Responsive mobile + desktop layouts
 
+## Mobile web launch
+
+Users open the hosted URL in Safari or Chrome; no source download or npm is required.
+This is a demo using sample data, not a live booking service.
+
+GitHub Pages deployment is configured in `.github/workflows/deploy.yml`:
+1. Push `main` to `https://github.com/ramrepala01/movewell`.
+2. In GitHub **Settings → Pages → Source**, select **GitHub Actions**.
+3. If the workflow ran before Pages was enabled, rerun **Deploy MoveWell** in **Actions**.
+4. Once deployment succeeds, open `https://ramrepala01.github.io/movewell/` on a phone.
+
+The GitHub repository URL displays source code; the Pages URL runs the app.
+Before real clinic use, implement authentication, clinic access permissions,
+persistent bookings, private uploads, messaging, and production operational controls.
+
 ## Run in VS Code
-1. Install Node.js 20+.
+1. Install Node.js 22.12+ (developer setup only).
 2. Open this folder in VS Code.
 3. In Terminal run: `npm install`
 4. Run: `npm run dev`
