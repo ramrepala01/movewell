@@ -13,6 +13,11 @@ A runnable React MVP for physiotherapy/therapy booking plus an athlete Strength 
 - Squad nutrition and hydration tracking
 - Responsive mobile + desktop layouts
 
+The athlete workspace uses bottom navigation below 640px, a horizontal navigation
+bar on tablets, and a sidebar from 1024px. Home, booking, plan, and nutrition
+layouts expand into columns as space permits. Coach tables scroll within their
+containers on phones, and dialogs scroll on short or landscape screens.
+
 ## Mobile web launch
 
 Users open the hosted URL in Safari or Chrome; no source download or npm is required.
