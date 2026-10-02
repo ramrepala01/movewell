@@ -87,3 +87,72 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 /* Keep dialogs usable on short screens and in phone landscape orientation. */
 .modal>div,.modal form{max-height:calc(100dvh - 40px);overflow-y:auto}
 .formRow>input{min-width:0}
+
+/* Recovery Moments shares the existing MoveWell cards, colors, and dashboard shell. */
+.appPortalActions{margin-left:auto;display:flex;gap:8px;align-items:center}
+.appPortalActions .switch{margin-left:0}
+.patientRecovery{margin-top:28px;min-width:0}
+.recoveryWorkspace,.recoveryWorkspace>*{min-width:0}
+.recoveryWorkspace .desktopTitle{gap:16px;flex-wrap:wrap}
+.recoveryMode,.recoveryHint{font-size:12px;color:#69736d;line-height:1.6}
+.recoveryMode{background:#edf4ee;border-radius:10px;padding:10px 12px}
+.recoverySafety{font-size:12px;line-height:1.65;color:#384c40;background:#eef5ec;border-left:3px solid #6b9b76;padding:12px 14px;border-radius:8px;overflow-wrap:anywhere}
+.recoveryError{color:#8d2626;background:#fff0ed;padding:12px;border-radius:10px;overflow-wrap:anywhere}
+.recoverySuccess{color:#285e45;background:#eef5ec;padding:12px;border-radius:10px}
+.recoveryNotification{display:flex;align-items:center;gap:8px;color:#285e45;font-size:13px}
+.recoveryNotification svg{flex:none}
+.recoveryCard,.recoveryForm,.recoveryEmpty{background:white;border:1px solid #e1e5e0;border-radius:18px;padding:20px;margin:12px 0;overflow-wrap:anywhere}
+.recoveryCard h3{margin:10px 0;font-size:18px}
+.recoveryCard p,.recoveryForm p,.recoveryEmpty p{font-size:13px;line-height:1.6}
+.recoveryCard ul{padding-left:20px;font-size:13px;line-height:1.8}
+.recoveryCardHeading{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.recoveryCardHeading h2{margin:0;font-size:20px}
+.recoveryCardHeading .pill{flex:none}
+.recoveryActions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:16px 0}
+.recoveryActions button,.recoveryRunner>button,.recoveryCardHeading>button{min-height:44px;background:white;border:1px solid #dce2dc;border-radius:12px;padding:10px 14px;color:#285e45}
+.recoveryActions .primary,.recoveryRunner .primary{background:#183f31;color:white}
+.recoveryActions button:disabled,.recoveryForm button:disabled,.recoveryRunner button:disabled{opacity:.5;cursor:default}
+.recoveryPatientSelect,.recoveryForm label,.recoveryContext label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:7px;margin:12px 0;min-width:0}
+.recoveryPatientSelect{max-width:360px}
+.recoveryPatientSelect select,.recoveryForm input,.recoveryForm select,.recoveryForm textarea,.recoveryContext input{width:100%;min-width:0;border:1px solid #dce2dc;border-radius:9px;padding:11px;background:white;color:#18221c;font-size:16px}
+.recoveryForm textarea{min-height:80px;resize:vertical}
+.recoveryFormGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
+.recoveryForm .recoveryCheck{flex-direction:row;align-items:center}
+.recoveryCheck input{width:22px;height:22px;flex:none}
+.recoveryForm fieldset{min-width:0;border:1px solid #dce2dc;border-radius:12px;padding:16px;margin:18px 0}
+.recoveryForm legend{font-size:14px;font-weight:700}
+.recoveryApproved{padding:10px 0;border-bottom:1px solid #e6eae4}
+.recoveryApproved:last-child{border-bottom:0}
+.recoveryStats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:20px}
+.recoveryStats>div{display:flex;flex-direction:column;gap:8px;border:1px solid #e1e5e0;border-radius:15px;background:white;padding:16px}
+.recoveryStats b{font-size:25px;color:#173f31}
+.recoveryStats span{font-size:12px;color:#69736d}
+.recoveryPrescriptionList{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.recoveryTimeline{list-style:none;padding:0;margin:16px 0}
+.recoveryTimeline li{display:grid;grid-template-columns:minmax(80px,.8fr) minmax(0,2fr) minmax(80px,1fr);gap:12px;align-items:center;border-bottom:1px solid #e1e5e0;padding:12px 0;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+.recoveryTimeline li>span{color:#69736d;display:flex;gap:5px;align-items:center}
+.recoveryContext{border:1px solid #e1e5e0;border-radius:14px;padding:16px;margin:16px 0}
+.recoveryContext summary{font-size:14px;font-weight:700;cursor:pointer;min-height:30px}
+.recoveryContext p{font-size:12px;line-height:1.6;color:#69736d}
+.recoveryModal .recoveryRunner{background:white;border-radius:22px;padding:24px;width:min(560px,100%);max-height:calc(100dvh - 40px);overflow-y:auto;overscroll-behavior:contain}
+.recoveryRunner p{font-size:13px;line-height:1.65}
+.recoveryTimer{font-size:48px;line-height:1.3;font-family:Manrope;color:#173f31;font-variant-numeric:tabular-nums}
+.recoveryMedia{display:block;max-width:100%;max-height:240px;border-radius:12px;margin:12px 0}
+@media(max-width:800px){.recoveryStats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:480px){
+  .app>header{height:auto;min-height:74px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+  .appPortalActions{gap:4px}
+  .appPortalActions .switch{font-size:9px;padding:8px}
+  .app>header .brand{font-size:20px}
+  .recoveryFormGrid{grid-template-columns:minmax(0,1fr)}
+  .recoveryStats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .recoveryStats>div{padding:12px}
+  .recoveryCard,.recoveryForm,.recoveryEmpty{padding:16px}
+  .recoveryTimeline li{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
+  .recoveryTimeline li>span:last-child{grid-column:2}
+  .recoveryModal{padding:12px}
+  .recoveryModal .recoveryRunner{padding:18px;max-height:calc(100dvh - 24px)}
+  .recoveryTherapist .coachHeader{height:auto;min-height:90px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+  .recoveryTherapist .coachActions{gap:6px}
+  .coachActions{gap:6px;flex-wrap:wrap;justify-content:flex-end}
+}
